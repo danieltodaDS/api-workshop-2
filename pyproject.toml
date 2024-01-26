@@ -12,6 +12,7 @@ uvicorn = "^0.27.0"
 taskipy = "^1.12.2"
 pytest = "^7.4.4"
 httpx = "^0.26.0"
+pandas = "^2.2.0"
 
 
 [build-system]
