@@ -16,7 +16,7 @@ def test_ola_mundo_json():
     
     assert response.json() == {"ola":"mundo"}
 
-def teste_lista_produtos_status_code(): 
+def test_lista_produtos_status_code(): 
     response = client.get("/produtos")
 
     assert response.status_code == 200
