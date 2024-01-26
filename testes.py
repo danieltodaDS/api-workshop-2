@@ -16,7 +16,7 @@ def test_ola_mundo_json():
     
     assert response.json() == {"ola":"mundo"}
 
-def teste_lista_produtos_status_code(): 
+def test_lista_produtos_status_code(): 
     response = client.get("/produtos")
 
     assert response.status_code == 200
@@ -25,3 +25,13 @@ def test_tamanho_lista_produtos():
     response = client.get("/produtos")
 
     assert len(response.json()) == 3
+
+def test_pega_um_produto():
+    response = client.get("/produtos/1")
+
+    assert response.json() == {
+        "id": 1,
+        "nome":"Celular",
+        "descricao": "aparelho celular",
+        "preco": 2131
+    }
