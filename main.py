@@ -34,3 +34,12 @@ def hello_world(): # Response
 @app.get("/produtos")
 def retorna_lista_produtos():
     return produtos
+
+# Busca produto especifico 
+@app.get("/produtos/{id}")
+def busca_produto(id:int):
+    for produto in produtos:
+        if produto["id"] == id:
+            return produto
+    return {"Status code": 404, "Mensagem": "Produto nao encontrado"}
+
