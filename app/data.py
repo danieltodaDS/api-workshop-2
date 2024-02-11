@@ -31,3 +31,7 @@ class Produtos:
             if produto["id"] == id:
                 return produto
         return {"Status code": 404, "Mensagem": "Produto nao encontrado"}
+    
+    def adicionar_produtos(self,produto): 
+        self.produtos.append(produto)
+        return produto 
