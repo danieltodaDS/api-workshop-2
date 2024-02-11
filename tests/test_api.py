@@ -3,7 +3,7 @@ import pytest
 # Funciona com um servidor de teste
 from fastapi.testclient import TestClient
 
-from main import app 
+from app.main import app 
 
 client = TestClient(app)
 
