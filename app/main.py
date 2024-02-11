@@ -16,18 +16,17 @@ def hello_world(): # Response
     return {"ola":"mundo"}
 
 # Printa na tela a lista de produtos
-@app.get("/produtos")
+@app.get("/produtos", response_model=list[ProdutosSchema])
 def listar_produtos():
     return lista_de_produtos.retorna_lista_produtos()
 
 
 # Busca produto especifico 
-@app.get("/produtos/{id}")
+@app.get("/produtos/{id}", response_model=ProdutosSchema)
 def busca_produto(id:int):
-    return lista_de_produtos.busca_produto()
+    return lista_de_produtos.busca_produto(id)
 
-    # for produto in produtos:
-    #     if produto["id"] == id:
-    #         return produto
-    # return {"Status code": 404, "Mensagem": "Produto nao encontrado"}
 
+@app.post("/produtos", response_model=ProdutosSchema)
+def adicionar_produto(produto: ProdutosSchema): 
+    return lista_de_produtos.adicionar_produtos(produto.model_dump())
