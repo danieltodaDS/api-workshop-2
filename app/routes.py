@@ -3,8 +3,7 @@ from sqlalchemy.orm import Session
 from typing import List
 
 from .schema import ProdutosSchema
-print("ok")
-# from .config import get_db
+from .config import get_db
 from .model import Produto
 
 router = APIRouter()
