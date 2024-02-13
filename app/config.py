@@ -29,6 +29,6 @@ def get_db():
     finally: 
         db.close()
 
-# if __name__ == "__main__":
-#     db = get_db()
-#     print (f"postgresql://{db_user}:{db_password}@{db_host}/{db_port}/{db_name}")
+if __name__ == "__main__":
+    db = get_db()
+    print (f"postgresql://{db_user}:{db_password}@{db_host}/{db_port}/{db_name}")

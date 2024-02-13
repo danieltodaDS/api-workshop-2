@@ -6,4 +6,4 @@ from .routes import router
 # Instancia o objeto da classe principal do framework
 app = FastAPI()
 
-app.include_routes(router)
+app.include_router(router)
