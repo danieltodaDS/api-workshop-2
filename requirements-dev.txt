@@ -6,6 +6,5 @@ pytest
 taskipy
 uvicorn
 SQLAlchemy
-dotenv
-typing
+
 
