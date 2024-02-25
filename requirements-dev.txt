@@ -5,3 +5,7 @@ pydantic
 pytest
 taskipy
 uvicorn
+SQLAlchemy
+python-dotenv
+
+
